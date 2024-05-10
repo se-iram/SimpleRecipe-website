@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy Recipes</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        overflow-x: hidden;
+      }
+      .container {
+        height: 100vh;
+        width: 100vw;
+        overflow-x: none;
+      }
+      .navcontainer {
+        widows: 100vw;
+        background-color: #161616;
+        background-image: linear-gradient(69deg, #161616 0%, #5f3d77 100%);
+        min-height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      #navbar {
+        width: 100%;
+      }
+      #navlist {
+        width: 100%;
+        list-style: none;
+        font-size: 2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #navlogo {
+        font-size: 2.8rem;
+        color: azure;
+      }
+      a {
+        text-decoration: none;
+        color: azure;
+      }
+      #navitems {
+        display: flex;
+        gap: 40px;
+      }
+      main {
+        padding: 30px;
+        background-color: #e2e5e8;
+        background-image: linear-gradient(98deg, #e2e5e8 0%, #ffffff 100%);
+      }
+      .contentBox {
+        width: 70%;
+        padding: 3rem;
+        margin: auto;
+        /* border: 1px solid black; */
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        box-shadow: 0px 0px 30px black;
+      }
+      .items {
+        display: flex;
+        justify-content: space-around;
+        /* overflow-x: none; */
+        align-items: center;
+      }
+      .rightBox {
+        position: relative;
+        /* overflow: hidden; */
+        transition: all 0.5s linear 0s;
+      }
+      .rightBox img {
+        height: 400px;
+        border-radius: 20px;
+        box-shadow: 1px 1px 10px 2px black;
+      }
+      .rightBox:hover {
+        transform: scale(1.1);
+      }
+      .leftBox {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .leftBox h2 {
+        font-size: 1.9rem;
+      }
+      .ingBox {
+        font-size: 1.3rem;
+      }
+      .recipeBox {
+        font-size: 1.1rem;
+      }
+      /* section{
+        background: rgba(238,174,202, 0.5);
+background: radial-gradient(circle, rgba(238,174,202,0.6644782913165266) 0%, rgba(148,187,233,0.6672794117647058) 100%);
+        border-radius: 25px;
+        padding: 20px;
+        box-shadow: 0px 0px 20px rgb(0, 59, 187);
+
+     } */
+
+      .footerBox {
+        background-color: #161616;
+        background-image: linear-gradient(69deg, #161616 0%, #5f3d77 100%);
+        width: 100%;
+        text-align: center;
+        min-height: 27px;
+      }
+      .footerBox p {
+        color: azure;
+        font-size: 1.3rem;
+      }
+      .rightBox .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 400px;
+        background-color: rgba(58, 57, 57, 0.516);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 25px;
+        border-radius: 20px;
+        opacity: 0;
+        transition: all 0.3s linear 0s;
+      }
+      .rightBox:hover .overlay {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="navcontainer">
+          <nav id="navbar">
+            <ul id="navlist">
+              <li>
+                <p id="navlogo">Yummy Recipes</p>
+              </li>
+              <li>
+                <div id="navitems">
+                  <a href="#">Home</a>
+                  <a href="#">Contact</a>
+                  <a href="#">About</a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <div class="contentBox">
+          <!-- item 1 -->
+          <section>
+            <div class="items">
+              <div class="leftBox">
+                <!-- heading -->
+                <h2>Gulab Jamun</h2>
+                <div>
+                  <h2>Ingredients</h2>
+                  <ul class="ingBox">
+                    <li>Sugar</li>
+                    <li>Bread</li>
+                    <li>Oil</li>
+                  </ul>
+                </div>
+                <div>
+                  <h2>Recipe</h2>
+                  <ol class="recipeBox">
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sapiente, accusantium.
+                    </li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="rightBox">
+                <img src="gulab jamun.jpg" alt="Gulab Jamun" />
+                <div class="overlay">
+                  <span> Click here to Buy </span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- item 2 -->
+          <section>
+            <div class="items">
+              <div class="leftBox">
+                <!-- heading -->
+                <h2>Cookies</h2>
+                <div>
+                  <h2>Ingredients</h2>
+                  <ul class="ingBox">
+                    <li>Sugar</li>
+                    <li>Bread</li>
+                    <li>Oil</li>
+                  </ul>
+                </div>
+                <div>
+                  <h2 >Recipe</h2>
+                  <ol class="recipeBox">
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sapiente, accusantium.
+                    </li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="rightBox">
+                <img src="cookies.jpg" alt="Cookies" />
+                <div class="overlay">
+                  <span> Click here to Buy </span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- item 3 -->
+          <section>
+            <div class="items">
+              <div class="leftBox">
+                <!-- heading -->
+                <h2>Gulab Jamun</h2>
+                <div>
+                  <h2>Ingredients</h2>
+                  <ul class="ingBox">
+                    <li>Sugar</li>
+                    <li>Bread</li>
+                    <li>Oil</li>
+                  </ul>
+                </div>
+                <div>
+                  <h2>Recipe</h2>
+                  <ol class="recipeBox">
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sapiente, accusantium.
+                    </li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="rightBox">
+                <img src="gulab jamun.jpg" alt="Gulab Jamun" />
+                <div class="overlay">
+                  <span> Click here to Buy </span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- item 4 -->
+          <section>
+            <div class="items">
+              <div class="leftBox">
+                <!-- heading -->
+                <h2>Cookies</h2>
+                <div>
+                  <h2>Ingredients</h2>
+                  <ul class="ingBox">
+                    <li>Sugar</li>
+                    <li>Bread</li>
+                    <li>Oil</li>
+                  </ul>
+                </div>
+                <div>
+                  <h2 >Recipe</h2>
+                  <ol class="recipeBox">
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sapiente, accusantium.
+                    </li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="rightBox">
+                <img src="cookies.jpg" alt="Cookies" />
+                <div class="overlay">
+                  <span> Click here to Buy </span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer>
+        <div class="footerBox">
+          <p>Copyright &#169; Yummy Recipes Pvt Ltd 2024</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
